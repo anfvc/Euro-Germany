@@ -53,8 +53,7 @@ nav .big-ul {
   margin: 0;
 }
 
-.mobile-ul,
-input {
+#menuToggle {
   display: none;
 }
 
@@ -501,7 +500,9 @@ footer img {
   }
 
   .mobile-ul {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     position: absolute;
     width: 300px;
     margin: -100px 0 0 -50px;
