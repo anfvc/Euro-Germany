@@ -46,11 +46,16 @@ header .cup {
   margin: 0;
 }
 
-nav ul {
+nav .big-ul {
   display: flex;
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+.mobile-ul,
+input {
+  display: none;
 }
 
 nav li {
@@ -522,7 +527,8 @@ footer img {
     transform: none;
   }
 
-  .cup1, .uefa-logo1  {
+  .cup1,
+  .uefa-logo1 {
     display: none;
   }
 
@@ -662,7 +668,7 @@ footer img {
   #stats .stat3,
   #stats .stat4 {
     margin: 0;
-    width: 80%;
+    width: 60%;
     object-fit: cover;
     object-position: center;
   }
@@ -683,7 +689,7 @@ footer img {
     object-fit: cover;
     object-position: center;
     margin: 0;
-    width: 80%;
+    width: 60%;
     position: initial;
     left: 0;
   }
