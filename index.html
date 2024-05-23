@@ -4,30 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./CSS/style.css" />
+    <script src="https://kit.fontawesome.com/c96613e0c8.js" crossorigin="anonymous"></script>
     <title>Euro Germany</title>
   </head>
 
   <body>
     <!-- HEADER STARTS -->
     <header>
-      <img class="cup" src="./IMG/pngegg.png" alt="image of cup" />
+      <img class="cup cup1" src="./IMG/pngegg.png" alt="image of cup" />
       <nav>
-        <ul>
+        <ul class="big-ul">
           <li><a href="#">Home</a></li>
           <li><a href="#tournament">Tournament</a></li>
           <li><a href="#host-cities">Host Cities</a></li>
           <li><a href="#stats">Stats</a></li>
           <li><a href="#tickets">Tickets</a></li>
         </ul>
+
+        <div id="menuToggle">
+          <input type="checkbox">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          </i>
+          <ul class="mobile-ul">
+          <li><a href="#">Home</a></li>
+          <li><a href="#tournament">Tournament</a></li>
+          <li><a href="#host-cities">Host Cities</a></li>
+          <li><a href="#stats">Stats</a></li>
+          <li><a href="#tickets">Tickets</a></li>
+
+          </ul>
+
+        </div>
+
+
+
       </nav>
-      <img src="IMG/uefa-com-vector-logo (1).png" alt="uefa logo" />
+      <img class="uefa-logo uefa-logo1" src="IMG/uefa-com-vector-logo (1).png" alt="uefa logo" />
     </header>
     <!-- HEADER ENDS -->
 
     <!-- WELCOME SECTION -->
-    <div class="welcomeImage">
+    <section class="welcomeImage">
       <img src="./IMG/euro2024welcome.jpg" alt="official euro image" />
-    </div>
+    </section>
 
     <!-- TOURNAMENT SECTION -->
     <h1>The Tournament</h1>
@@ -287,7 +308,7 @@
     <!-- STATS SECTION -->
     <section id="stats">
       <h3>All-time Stats</h3>
-      <div>
+      <div class="stats1">
         <img class="stat1" src="./IMG/most-titles.png" alt="titles stats" />
         <img class="stat2" src="./IMG/matches-played.png" alt="matches stats" />
         <img
@@ -301,7 +322,7 @@
           alt="appereances stats"
         />
       </div>
-      <div>
+      <div class="stats2">
         <img class="stat5" src="./IMG/matches-playde.png" alt="matches stats" />
         <img class="stat6" src="./IMG/minutes-played.png" alt="minutes stats" />
         <img class="stat7" src="./IMG/most-assists.png" alt="assists stats" />

@@ -4,6 +4,7 @@
 
 html {
   scroll-padding-top: 200px;
+  scroll-behavior: smooth;
 }
 
 /* INTRODUCING THE UEFA FONT */
@@ -427,6 +428,104 @@ footer img {
 }
 
 @media (max-width: 600px) {
+  nav {
+    width: 100%;
+  }
+
+  nav .big-ul {
+    display: none;
+  }
+
+  /* nav .mobile-ul {
+    display: none;
+  } */
+
+  #menuToggle {
+    display: block;
+    position: relative;
+  }
+
+  #menuToggle input {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 32px;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+
+  #menuToggle .bar {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: black;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle .bar:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle .bar:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  #menuToggle input:checked ~ .bar {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  #menuToggle input:checked ~ .bar:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  #menuToggle input:checked ~ .bar:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  .mobile-ul {
+    flex-direction: column;
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  .mobile-ul li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+
+  .cup1, .uefa-logo1  {
+    display: none;
+  }
+
   h1 {
     font-size: 2rem;
   }
@@ -537,5 +636,55 @@ footer img {
 
   .sources {
     flex-wrap: wrap;
+  }
+
+  #stats {
+    padding: 10rem 0.5rem;
+  }
+
+  #stats h3 {
+    margin: 0;
+    padding: 1rem 0 2rem;
+  }
+
+  #stats .stats1 {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  #stats .stat1,
+  #stats .stat2,
+  #stats .stat3,
+  #stats .stat4 {
+    margin: 0;
+    width: 80%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #stats .stats2 {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin: 0;
+    padding: 0.8rem 0;
+    gap: 1.5rem;
+  }
+
+  #stats .stat5,
+  #stats .stat6,
+  #stats .stat7,
+  #stats .stat8 {
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    width: 80%;
+    position: initial;
+    left: 0;
   }
 }
