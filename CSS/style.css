@@ -181,8 +181,12 @@ h3 {
 /* HOST CITIES SECTION */
 
 #host-cities {
+  margin: 0 auto;
   background-color: rgb(255, 202, 0);
-  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 #host-cities img {
@@ -199,8 +203,13 @@ h3 {
   justify-content: center;
   align-items: center;
   color: #000d40;
-  text-align: justify;
+  width: 100%;
 }
+
+.hostCitiesContainer div:first-of-type {
+  align-items: end;
+}
+
 
 .hostCitiesContainer h4 {
   font-size: 25px;
@@ -208,8 +217,14 @@ h3 {
 }
 
 .hostCitiesContainer div {
-  width: 30%;
-  margin: 20px -40px;
+  width: 60%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.description-host {
+  width: 40%;
 }
 
 /* STATS SECTION */
@@ -429,6 +444,50 @@ footer li:hover {
 
 footer img {
   width: 100%;
+}
+
+@media (max-width: 1536px) {
+  #tournament div, .champion-photos, .champions article, .germanyHost, #host-cities {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 900px) {
+  article div {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+
+  .germanyHost {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .germanyHost div:first-child {
+    width: 90%;
+  }
+
+  .hostCitiesContainer {
+    width: 100%;
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  .hostCitiesContainer div {
+    width: 100%;
+    margin: 0;
+  }
+
+  .hostCitiesContainer div p {
+    width: 100%;
+  }
+
+  .description-host {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
